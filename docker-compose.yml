@@ -13,7 +13,7 @@ services:
         working_dir: /var/www/html
         extra_hosts:
             - "host.docker.internal:host-gateway"
-            - "wp.local:host-gateway"
+            - "${LOCAL_DOMAIN:-wp.local}:host-gateway"
         depends_on:
             - php
             - mysql
